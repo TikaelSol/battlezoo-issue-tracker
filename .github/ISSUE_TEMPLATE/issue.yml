@@ -27,7 +27,7 @@ body:
       options:
         - Issue
         - Suggestion
-      default: Issue
+      default: 0
     validations:
       required: true
   - type: dropdown
@@ -68,6 +68,6 @@ body:
       label: Issue description?
       description: Add any details. You can paste in screenshots here. Include any relevant errors from console (F12 in most broswers). Note that any errors with a gift emoji in it are not caused by Battlezoo modules, as we do not use the libwrapper module.
       placeholder: 
-      value: ""
+      value: "Tell us what broke."
     validations:
       required: true
