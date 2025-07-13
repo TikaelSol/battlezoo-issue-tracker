@@ -1,0 +1,73 @@
+name: Report an Issue
+description: Submit an issue for one of the RFC Battlezoo modules
+labels: ["bug"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue!
+  - type: dropdown
+    id: system
+    attributes:
+      label: System
+      description: What system are you reporting this for?
+      options:
+        - Pathfinder 2e
+        - D&D 5e
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Issue Type
+      description: Is this an issue or a suggestion?
+      options:
+        - Issue
+        - Suggestion
+      default: Issue
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      description: What module are you reporting the issue for?
+      options:
+        - Battlezoo Dragons
+        - Dragons Core
+        - Battle Dragons
+        - Fairy Dragons
+        - Leshy Dragons
+        - Misfit Dragons
+        - Battlezoo Bestiary
+        - Strange & Unusual
+        - Elemental Storm
+        - Classic Creatures
+        - Year of Legends
+        - Year of Titans
+        - Jewel of the Indigo Isles
+        - World of Indigo Isles
+        - Other
+      default: 0
+    validations:
+      required: true
+  - type: checkboxes
+    id: other-modules
+    attributes:
+      label: Other Modules
+      description: Have you confirmed this issue happens with no other modules enabled?
+      options:
+        - label: I have tested with no other modules enabled
+          required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Issue description?
+      description: Add any details. You can paste in screenshots here. Include any relevant errors from console (F12 in most broswers). Note that any errors with a gift emoji in it are not caused by Battlezoo modules, as we do not use the libwrapper module.
+      placeholder: 
+      value: ""
+    validations:
+      required: true
